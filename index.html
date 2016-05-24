@@ -1,15 +1,16 @@
 <html>
 <head>
   <title>So React! Much wow!</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-with-addons.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-with-addons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/2.4.1/ReactRouter.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.min.js"></script>
 </head>
 <body>
     <div id="app"></div>
 
     <script>
-        fetch("./app.js").then(function (response) {
+        fetch('./app.js').then(function (response) {
             response.text().then(function (js) {
                 eval(Babel.transform(js, {presets: ['es2015', 'react']}).code);
             });
